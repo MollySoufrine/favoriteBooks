@@ -1,16 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<h1>Add to the list of favorite books!</h1>
+
+    <Books />
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Books from './components/Books'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Books
+  },
 }
 </script>
 
