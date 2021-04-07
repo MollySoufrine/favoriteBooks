@@ -1,8 +1,9 @@
 <template>
 <div class="books">
         <ul id="bookList">
-        <li v-for="book in books" :key="book.title">
-           {{book.title}} - {{book.author}}
+        <li v-for="book in books" :key="book.title" :class="{fav: book.isFav}" @click="toggleIsFav">
+      <h3>     {{book.title}} </h3>
+      <p> {{book.author}}</p>
         </li>
     </ul>
 </div>
