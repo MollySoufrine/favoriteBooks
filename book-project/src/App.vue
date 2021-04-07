@@ -1,7 +1,9 @@
 <template>
 <h1>Add to the list of favorite books!</h1>
 
+
     <Books />
+    <Modal/>
    
   
 
@@ -9,13 +11,16 @@
 
 <script>
 import Books from './components/Books'
+import Modal from "./components/Modal"
 
 export default {
   name: 'App',
   components: {
-
+    //registering that we want to use our components inside App.vue
+    Modal,
     Books
   },
+
 
 }
 </script>

@@ -7,7 +7,7 @@
       <p> {{book.author}}</p>
         </li>
     </ul>
-
+<button @click="handleClick"></button>
 </div>
 </template>
 
@@ -55,7 +55,8 @@ export default {
     toggleIsFav(book) {
       book.isFav = !book.isFav;
     },
-  }
+  },
+
 
 }
 </script>
