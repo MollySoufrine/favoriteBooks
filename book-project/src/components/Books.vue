@@ -1,11 +1,13 @@
 <template>
 <div class="books">
         <ul id="bookList">
-        <li v-for="book in books" :key="book.title" :class="{fav: book.isFav}" @click="toggleIsFav">
+        <li v-for="book in books" :key="book.title" :class="{fav: book.isFav}" @click="toggleIsFav(book)">
+            <img :src="book.src" :alt="book.title">
       <h3>     {{book.title}} </h3>
       <p> {{book.author}}</p>
         </li>
     </ul>
+
 </div>
 </template>
 
@@ -16,32 +18,40 @@ export default {
     data()
     {
         return{
-        showBooks: true,
+        addBook: true,
 
       books: [
         {
-          title: "name of the wind",
-          author: "patrick rothfuss",
+          title: "The Iron Druid Chronicles",
+          author: "Kevin Hearne",
           isFav: true,
+          src: require("../assets/druid.jpg")
         },
         {
-          title: "the way of kings",
-          author: "brandon snaderson",
-          isFav: false,
+          title: "The Inheritance Cycle",
+          author: "Christopher Paolini",
+          isFav: true,
+          src: require("../assets/eragon.jpg")
         },
         {
-          title: "the final empire",
-          author: "brandon snaderson",
+          title: "Enders Game",
+          author: "Orson Scott Card",
           isFav: true,
+            src: require("../assets/ender.jpg")
         },
+                {
+          title: "The Lies of Locke Lamora",
+          author: "Scott Lynch",
+          isFav: true,
+            src: require("../assets/locke.jpg")
+        },
+    
       ],
  
     }
     },
     methods:{
-    toggleShowBooks() {
-      this.showBooks = !this.showBooks;
-    },
+ 
     toggleIsFav(book) {
       book.isFav = !book.isFav;
     },

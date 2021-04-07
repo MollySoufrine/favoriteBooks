@@ -2,6 +2,8 @@
 <h1>Add to the list of favorite books!</h1>
 
     <Books />
+   
+  
 
 </template>
 
@@ -11,8 +13,10 @@ import Books from './components/Books'
 export default {
   name: 'App',
   components: {
+
     Books
   },
+
 }
 </script>
 
