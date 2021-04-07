@@ -1,12 +1,9 @@
 <template>
 <h1>Add to the list of favorite books!</h1>
 
-
     <Books />
     <Modal/>
    
-  
-
 </template>
 
 <script>

@@ -7,7 +7,7 @@
       <p> {{book.author}}</p>
         </li>
     </ul>
-<button @click="handleClick"></button>
+
 </div>
 </template>
 
@@ -25,25 +25,25 @@ export default {
           title: "The Iron Druid Chronicles",
           author: "Kevin Hearne",
           isFav: true,
-          src: require("../assets/druid.jpg")
+          src: require("../assets/images/druid.jpg")
         },
         {
           title: "The Inheritance Cycle",
           author: "Christopher Paolini",
           isFav: true,
-          src: require("../assets/eragon.jpg")
+          src: require("../assets/images/eragon.jpg")
         },
         {
           title: "Enders Game",
           author: "Orson Scott Card",
           isFav: true,
-            src: require("../assets/ender.jpg")
+            src: require("../assets/images/ender.jpg")
         },
                 {
           title: "The Lies of Locke Lamora",
           author: "Scott Lynch",
           isFav: true,
-            src: require("../assets/locke.jpg")
+            src: require("../assets/images/locke.jpg")
         },
     
       ],
@@ -60,3 +60,4 @@ export default {
 
 }
 </script>
+<style scoped src="../assets/books.css">  </style>
