@@ -1,5 +1,7 @@
 <template>
-    <div class="backdrop" @click="closeModal">
+    <div class="backdrop" @click.self="closeModal">
+      <!-- restrict close toggle to just backdrop and not child, can add
+      a modifier toan event -->
         <div class="modal" >
             <h1>{{header}}</h1>
             <button>{{text}}</button>

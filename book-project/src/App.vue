@@ -1,10 +1,10 @@
 <template>
 <h1>Welcome! Looking for a good book to read?</h1>
-   <button @click="toggleModal">open modal</button>
-
+<button @click.alt="toggleModal">open modal  (alt)</button>
     <Books  />
   <div v-if="showModal"> 
       <Modal :header="header" :text="text" @close="toggleModal"/>
+         
   </div>
 
 </template>
