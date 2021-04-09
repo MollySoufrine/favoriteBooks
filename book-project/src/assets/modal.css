@@ -17,3 +17,8 @@
         border:none;
         padding:0;
     }
+    .modal.dark{
+        background: rgb(57, 56, 56);
+       
+    }
+  

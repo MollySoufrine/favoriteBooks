@@ -1,12 +1,28 @@
 <template>
-    <div class="backdrop">
-        <div class="modal">
-            <h1>Modal Title</h1>
-            <p>modal content</p>
+    <div class="backdrop" @click="closeModal">
+        <div class="modal" >
+            <h1>{{header}}</h1>
+            <button>{{text}}</button>
          </div>
     </div>
 
 </template>
+
+<script>
+
+
+export default {
+  props: ['header', 'text'],
+  methods:{
+closeModal(){
+  this.$emit('close')
+}
+  }
+}
+
+</script>
+
+
 
 <style src="../assets/modal.css">
 

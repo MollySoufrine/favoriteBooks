@@ -1,6 +1,6 @@
 <template>
-<div class="books">
-        <ul id="bookList">
+<div class="books" >
+        <ul id="bookList" >
         <li v-for="book in books" :key="book.title" :class="{fav: book.isFav}" @click="toggleIsFav(book)">
             <img :src="book.src" :alt="book.title">
       <h3>     {{book.title}} </h3>
@@ -14,11 +14,11 @@
 
 <script>
 export default {
-   
+
     data()
     {
         return{
-        addBook: true,
+       
 
       books: [
         {
