@@ -1,20 +1,30 @@
 <template>
   <form>
       <label>Title:</label>
-      <input type="text" required>
+      <input type="title" required v-model="title">
+        <p>Title: {{title}}</p>
+       <label>Author:</label>
+      <input type="author" required v-model="author">
+        <p>Author: {{author}}</p>
   </form>
+
 </template>
 
 <script>
 export default {
-
+data(){
+    return{
+        title:"",
+        author: ""
+    }
+}
 }
 </script>
 
 <style>
 form{
     max-width:100%;
-    margin:2rem auto;
+    margin:2rem;
     background: #eee;
     text-align: left;
     padding:2rem;
@@ -27,7 +37,7 @@ label{
     margin:1rem 0 .5rem;
     font: .6em;
     text-transform: uppercase;
-    letter-spacing: .5rem;
+    letter-spacing: .2rem;
     font-weight:bold;
 }
 input{
@@ -36,8 +46,9 @@ input{
     width:100%;
     box-sizing:border-box;
     border:none;
-    border-bottom: .5rem solid #ddd;
+    border-bottom: .2rem solid #ddd;
     color:#555;
 
 }
+
 </style>
