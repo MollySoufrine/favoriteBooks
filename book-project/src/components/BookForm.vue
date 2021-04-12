@@ -6,6 +6,13 @@
        <label>Author:</label>
       <input type="author" required v-model="author">
         <p>Author: {{author}}</p>
+
+    <div class="addAnother">
+        <input type="checkbox" v-model="selected">
+        <label>Add Another Book</label>
+        <p>lets add another book: {{selected}}</p>
+    </div>
+
   </form>
 
 </template>
@@ -15,7 +22,8 @@ export default {
 data(){
     return{
         title:"",
-        author: ""
+        author: "",
+        selected:false
     }
 }
 }
@@ -48,6 +56,13 @@ input{
     border:none;
     border-bottom: .2rem solid #ddd;
     color:#555;
+
+}
+input[type="checkbox"]{
+    display:inline-block;
+    width:1rem;
+    margin:0.2rem;
+    position: relative;
 
 }
 

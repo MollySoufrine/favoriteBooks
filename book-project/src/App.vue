@@ -37,6 +37,7 @@ export default {
        header:"Add your favorite book to the list!",
        text:"Click here to add a book!",
       showModal:false,
+      showForm:false,
 
 
     }
