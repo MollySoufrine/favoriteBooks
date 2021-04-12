@@ -1,6 +1,22 @@
-body{
-    margin:0;
+body {
+  margin: 0;
 }
-p{
-    font-style: italic;
+p {
+  font-style: italic;
+}
+button {
+  background: rgb(190, 188, 188);
+  border-style: none;
+  border-radius: 0.2rem;
+}
+button:hover {
+  box-shadow: #333 0.1rem 0.15rem;
+}
+.bookDiv {
+  width: 10rem;
+  padding: 1rem;
+}
+
+.bookDiv:hover {
+  box-shadow: #333 0.2rem 0.2rem 0.5rem;
 }

@@ -1,6 +1,6 @@
 <template>
 <h1>Welcome! Looking for a good book to read?</h1>
-<button @click.alt="toggleModal">open modal  (alt)</button>
+<button @click.alt="toggleModal">Click Me!</button>
     <Books  />
   <div v-if="showModal"> 
       <Modal @close="toggleModal">
@@ -8,13 +8,16 @@
        
 <!-- four basic slot to be used as a template in Modal -->
 
-        <template v-slot:forms>
-          <a href="#">Fill out the form here</a>
-        </template>
+     
       </Modal>
         
   </div>
- <BookForm  />
+
+    <button class="bookDiv" @click="toggleForm">Add a Book to the list!</button>
+<div v-if="toggleForm" class="toggleForm">
+   <BookForm />
+</div>
+
 </template>
 
 <script>
@@ -51,6 +54,9 @@ this.addBook = !this.addBook
    this.showModal = !this.showModal
  },
 
+toggleForm(){
+  this.showForm != this.showForm
+}
   }
 
 

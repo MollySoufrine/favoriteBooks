@@ -25,7 +25,8 @@ data(){
         author: "",
         selected:false
     }
-}
+},
+
 }
 </script>
 
