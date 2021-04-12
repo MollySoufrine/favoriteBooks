@@ -3,7 +3,15 @@
 <button @click.alt="toggleModal">open modal  (alt)</button>
     <Books  />
   <div v-if="showModal"> 
-      <Modal :header="header" :text="text" @close="toggleModal"/>
+      <Modal>
+        <h1>Be sure to check your book is not already on our list!</h1>
+       
+<!-- four basic slot to be used as a template in Modal -->
+
+        <template v-slot:forms>
+          <a href="#">Fill out the form here</a>
+        </template>
+      </Modal>
          
   </div>
 
