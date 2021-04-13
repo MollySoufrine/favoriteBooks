@@ -1,12 +1,9 @@
 <template>
-<div class="books" >
-        <ul id="bookList" >
-        <li v-for="book in books" :key="book.title" :class="{fav: book.isFav}" @click="toggleIsFav(book)">
-            <img :src="book.src" :alt="book.title">
-      <h3>     {{book.title}} </h3>
-      <p> {{book.author}}</p>
-        </li>
-    </ul>
+<div class="bookList" >
+<div v-for="book in books" :key="book.id">
+  <SingleBook :book="book"/>
+</div>
+
 
 </div>
 </template>
@@ -15,49 +12,45 @@
 <script>
 export default {
 
-    data()
-    {
-        return{
-       
-
-      books: [
-        {
-          title: "The Iron Druid Chronicles",
-          author: "Kevin Hearne",
-          isFav: true,
-          src: require("../assets/images/druid.jpg")
-        },
-        {
-          title: "The Inheritance Cycle",
-          author: "Christopher Paolini",
-          isFav: true,
-          src: require("../assets/images/eragon.jpg")
-        },
-        {
-          title: "Enders Game",
-          author: "Orson Scott Card",
-          isFav: true,
-            src: require("../assets/images/ender.jpg")
-        },
-                {
-          title: "The Lies of Locke Lamora",
-          author: "Scott Lynch",
-          isFav: true,
-            src: require("../assets/images/locke.jpg")
-        },
-    
-      ],
- 
-    }
-    },
-    methods:{
- 
-    toggleIsFav(book) {
-      book.isFav = !book.isFav;
-    },
-  },
+props: ['books'],
+components: {SingleBook},
+setup(props){
+console.llog(props)
+}
 
 
 }
 </script>
-<style scoped src="../assets/books.css">  </style>
+<style> 
+.books body{
+    background: #eee;
+    max-width: 960px;
+    margin: 20px auto;
+  }
+.books h3, ul{
+    margin: 0;
+    padding: 0;
+  }
+  .books li{
+    list-style-type: none;
+    background: #fff;
+    margin: 1.5rem auto;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .books li.fav{
+    background: #ff9ed2;
+    color: white;
+  }
+  .books img{
+  width:5.5rem;
+  height:5.5rem;
+
+  }
+.dark li.fav{
+    background: rgb(37, 35, 35);
+  }
+</style>

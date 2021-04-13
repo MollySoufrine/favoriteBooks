@@ -1,65 +1,14 @@
 <template>
-<h1>Welcome! Looking for a good book to read?</h1>
-<button @click.alt="toggleModal">Click Me!</button>
-    <Books  />
-  <div v-if="showModal"> 
-      <Modal @close="toggleModal">
-        <h1>Be sure to check your book is not already on our list!</h1>
-       
-<!-- four basic slot to be used as a template in Modal -->
-
-     
-      </Modal>
-        
-  </div>
-
-    <button class="bookDiv" @click="toggleForm">Add a Book to the list!</button>
-<div v-if="toggleForm" class="toggleForm">
-   <BookForm />
-</div>
-
+<Navbar/>
+  <router-view/>
 </template>
-
 <script>
-import Books from './components/Books'
-import Modal from "./components/Modal"
-import BookForm from "./components/BookForm"
+import Navbar from "./components/Navbar"
 
 export default {
-  name: 'App',
-  components: {
-    //registering that we want to use our components inside App.vue
-    Modal,
-    Books,
-    BookForm
-    //why pass props?...makes components more reusable because messages wont be hard coded inside modal
-  },
-  data(){
-    return{
-       addBook: true,
-       header:"Add your favorite book to the list!",
-       text:"Click here to add a book!",
-      showModal:false,
-      showForm:false,
-
-
-    }
-  },
-  methods:{
-    addBook(){
-this.addBook = !this.addBook
-    },
-   
- toggleModal(){
-   this.showModal = !this.showModal
- },
-
-toggleForm(){
-  this.showForm != this.showForm
-}
-  }
-
-
+  conponents:{Navbar}
+    
+  
 }
 </script>
 
@@ -70,6 +19,18 @@ toggleForm(){
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
