@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Home from "../views/Details.vue";
+import Details from "../views/Details.vue";
+import Create from "../views/Create.vue";
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
     component: Details,
     props: true,
     // route level code-splitting
+  },
+  {
+    path: "/create",
+    name: "Create",
+    component: Create,
   },
 ];
 

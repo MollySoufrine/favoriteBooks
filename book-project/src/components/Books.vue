@@ -10,12 +10,14 @@
 
 
 <script>
+import SingleBook from "./SingleBook"
+
 export default {
 
 props: ['books'],
 components: {SingleBook},
 setup(props){
-console.llog(props)
+console.log(props)
 }
 
 

@@ -1,22 +1,23 @@
 <template>
 <header>
-    <h1></h1>
-    <nav>
-        <router-link :to="{name:'Home'}">Home</router-link>
-        <router-link :to="{name:'Books'}">Book List</router-link>
-        <router-link :to="{name:'Create'}">Add a Book</router-link>
+    <h1>The Book List</h1>
+      <nav>
+      <router-link :to="{ name: 'Home' }">Home</router-link>
+      <router-link :to="{ name: 'Create' }">Create Post</router-link>
     </nav>
+
 </header>
 </template>
 
 <script>
 
 
-export default defineComponent({
+export default {
 
-})
+}
 </script>
 <style>
+
   header {
     display: flex;
     justify-content: space-between;
@@ -26,7 +27,7 @@ export default defineComponent({
     padding: 10px;
   }
   header h1 {
-    color: #dfdfdf;
+    color: #969090;
     font-size: 48px;
   }
   header a {
