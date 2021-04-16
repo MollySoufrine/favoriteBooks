@@ -47,11 +47,7 @@ console.log(props)
     background: #fd0388;
     color: white;
   }
-  .books img{
-  width:5.5rem;
-  height:5.5rem;
-
-  }
+ 
 .dark li.fav{
     background: rgb(37, 35, 35);
   }

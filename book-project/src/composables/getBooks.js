@@ -8,12 +8,12 @@ const getBooks = () => {
   const load = async () => {
     try {
       const res = await projectFirestore.collection("books").get();
-      // console.log(res.docs)
+      console.log(res);
 
-      books.value = res.docs.map((doc) => {
-        // console.log(doc.data())
-        return { ...doc.data(), id: doc.id };
-      });
+      //   books.value = res.docs.map((doc) => {
+      //     console.log(doc.data());
+      //     return { ...doc.data(), id: doc.id };
+      //   });
     } catch (err) {
       error.value = err.message;
     }

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div v-if="error">{{error}}</div>
-    <div v-if="books.length" class="layout">
+    <div v-if="books" class="layout">
 <Books :books="books"/>
     </div>
   </div>
