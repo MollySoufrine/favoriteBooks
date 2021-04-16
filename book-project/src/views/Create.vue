@@ -45,5 +45,54 @@ export default {
 </script>
 
 <style>
+form{
+    max-width:100%;
+    margin: 0 auto;
+    text-align: left;
+}
+input, textarea{
+    display:block;
+    margin: 1.5rem 0 ;
+    min-width:100%;
+    box-sizing: border-box;
+    padding:1rem;
+    border:.2rem solid #eee;
+}
+textarea{
+    min-height: 10rem;
+}
+label{
+    display:inline-block;
+    margin-top: 1.5rem;
+    position: relative;
+font-size: 1.3rem;
+color:rgb(71, 68, 68);
+margin-bottom:.5rem;
+}
+  label::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fd0388;
+    position: absolute;
+    z-index: -1;
+    padding-right: 2rem;
+    left: -1rem;
+    transform: rotateZ(-1.5deg);
+  }
+  button{
 
+      display:inline-block;
+      margin:1.5rem;
+      border:none;
+      background: #888887;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius:.4rem;
+  }
+  button:hover{
+box-shadow: #fd0388 .2rem .2rem .3rem .3rem;
+  }
 </style>

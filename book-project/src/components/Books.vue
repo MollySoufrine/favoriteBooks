@@ -44,7 +44,7 @@ console.log(props)
     justify-content: space-between;
   }
   .books li.fav{
-    background: #ff9ed2;
+    background: #fd0388;
     color: white;
   }
   .books img{

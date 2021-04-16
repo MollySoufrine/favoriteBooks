@@ -22,21 +22,22 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 10px;
+    padding: .5rem;
   }
   header h1 {
-    color: #969090;
-    font-size: 48px;
+    color: #fff;
+    font-size: 3rem;
+
   }
   header a {
-    color: #bbb;
+    color: rgb(80, 78, 78);
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 1.5rem;
   }
   header a.router-link-active {
-    color: #444;
+       color: #fff;
     font-weight: bold;
   }
 </style>
